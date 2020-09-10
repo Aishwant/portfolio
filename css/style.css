@@ -1,0 +1,162 @@
+
+body{
+}
+
+.content{
+    width: 85%;
+    height: 80%;
+    background-color: #fff;
+    position: fixed; /*Can also be `fixed`/`absoulute`*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.div-content-1{
+    width: 70px;
+    height: 100%;
+    float:left;
+    color: #fff;
+    background-color: #1D3557;
+}
+
+.div-content-2{
+    width: 30%;
+    height: 100%;
+    float:left;
+    background-color: #9edaff;
+}
+
+.div-content-3{
+    width: 60%;
+    height: 100%;
+    float:left;
+}
+
+/* left-menu */
+.toggle-leftmenu{
+    background-color: #457B9D;
+    color: #fff;
+    padding: 5px;
+    font-size:30px;
+    cursor: pointer;
+}
+
+.toggle-leftmenu:hover{
+    color: #111;
+}
+
+side-menu-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.side-menu-list > div{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.side-menu-list > div:hover{
+    background-color:  #457B9D;
+}
+
+
+@media only screen and (max-width: 850px){
+    .content{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: fixed; /*Can also be `fixed`/`absoulute`*/
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+    }
+    
+    .div-content-1{
+        width: 70px;
+        height: 100%;
+        
+        float: left;
+    }
+    
+    .div-content-2{
+        display: none;
+    }
+    
+    .div-content-3{
+        height: 100%;
+        float: left;
+    }
+}
+
+/* Side Nav Starts */
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow-y: hidden;
+}
+
+.sidenav-menu{
+    height: 40%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.sidenav-menu a {
+    padding: 8px 8px 32px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav-menu a:hover {
+    color: #f1f1f1;
+  }
+  
+
+.sidenav .closebtn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  /* Side Nav Stops */
+
+
