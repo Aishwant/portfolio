@@ -61,8 +61,13 @@ sizeContentDivs = () => {
     if (window.outerWidth <= 850 ){
         var width = window.outerWidth - 70 - 15;
         $(".heading").width(width);
-    }else{
+    }
+    else if(window.outerWidth > 850 && window.outerWidth < 992){
         var width = $(".content").width() - 230 - 70;
+        $(".heading").width(width);
+    }
+    else{
+        var width = $(".content").width() - 330 - 70;
         $(".heading").width(width);
     }
 }

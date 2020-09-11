@@ -4,6 +4,7 @@ body{
     font-family: 'Overpass', sans-serif;
     background-image: url("../assets/background/Friday.jpg");
     background-size: cover;
+    color: #111;
 }
 
 .content{
@@ -141,6 +142,7 @@ body{
 
     .main-contents{
         left: 80px!important;
+        padding-right: 10px;
         overflow: hidden;
     }
 
@@ -212,18 +214,58 @@ body{
     h1{font-size: 2.6rem!important;}
   }
 
+  @media screen and (min-width: 992px){
+    .img-border{
+        width: 300px;
+        height: 300px;
+        top: 20%;
+    }
+
+    .img-me {
+        width: 340px;
+        height: 360px;
+        margin-left: -12px;
+    }
+
+    .div-content-2{
+        width: 315px;
+    }
+
+    .div-content-3{
+        width: calc(100% - 315px - 70px);
+    }
+
+    .main-contents{
+        left: 390px!important;
+    }
+  }
+
 .main-contents{
+    padding: 0;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 290px;
     right: -14px;
     overflow-y: scroll;
-    padding-right: 10px;
+    overflow-x: hidden;
+    /* padding-right: 10px; */
 }
 
 h1{
     font-weight: 900;
-    font-size: 3.9rem;
+    font-size: 4.5rem;
 }
 
+.sub-content{
+    margin: 0;
+    padding: 20px;
+}
+
+.content-body{
+    color: grey;
+}
+
+.heading{
+
+}
