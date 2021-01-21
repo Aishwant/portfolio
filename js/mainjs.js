@@ -13,3 +13,23 @@ closeNav = () => {
     menu.style.display = "none";
     document.getElementsByClassName("menu-toggle-button")[0].style.display = "block";
 }
+
+changeTheme = () => {
+    console.log("Change");
+    if(document.getElementById("customSwitch1").checked){
+        darkTheme()
+    }else{
+        lightTheme()
+    }
+}
+
+lightTheme = () => {
+    document.querySelector(".intro-img").style.backgroundImage = "url('./assets/AishwantGhimire.JPG')"
+    document.documentElement.style.setProperty("--primary-bgcolor", "#fff");
+}
+
+darkTheme = () => {
+    document.querySelector(".intro-img").style.backgroundImage = "url('./assets/AishwantGhimirebw.JPG')"
+    document.documentElement.style.setProperty("--primary-bgcolor", "#000");
+    document.documentElement.style.setProperty("--primary2-font-color", "#fff");
+}
