@@ -23,12 +23,12 @@ var globalmin = -2;
 var active = ".aboutme-nav";
 
 makeactive = () => {
-    $('.aboutme-nav').css("background-color", "#1D3557");
-    $('.skills-nav').css("background-color", "#1D3557");
-    $('.experiences-nav').css("background-color", "#1D3557");
-    $('.education-nav').css("background-color", "#1D3557");
-    $('.contact-nav').css("background-color", "#1D3557");
-    $(active).css("background-color", "#96c4e4");
+    $('.aboutme-nav').css("color", "grey");
+    $('.skills-nav').css("color", "grey");
+    $('.experiences-nav').css("color", "grey");
+    $('.education-nav').css("color", "grey");
+    $('.contact-nav').css("color", "grey");
+    $(active).css("color", "#96c4e4");
 }
 
 makeactive();
@@ -39,7 +39,7 @@ $('.main-contents').on('scroll', () => {
         makeactive();
     }
     else if($('#skills').position().top < globalmax && $('#skills').position().top > globalmin && active != "skills-nav"){
-        active = ".skills-nav";
+        active = ".skills-nav"
         makeactive();
     }
     else if($('#experiences').position().top < globalmax && $('#experiences').position().top > globalmin && active != "experiences-nav"){
@@ -54,23 +54,36 @@ $('.main-contents').on('scroll', () => {
         active = ".contact-nav";
         makeactive();
     }
+
+    if($('#skills').position().top == ($(".main-contents").height() - 10)){
+        console.log("Hello")
+        console.log($(".main-contents").height() - 10);
+    }
+
 });
 
 
-sizeContentDivs = () => {
-    if (window.outerWidth <= 850 ){
-        var width = window.outerWidth - 70 - 15;
+
+function sizeContentDivs(){
+    if (window.innerHeight <= 850 ){
+        var width = $(".div-content-3").width() - 10;
         $(".heading").width(width);
     }
-    else if(window.outerWidth > 850 && window.outerWidth < 992){
-        var width = $(".content").width() - 230 - 70;
+    else if(window.innerHeight > 850 && window.innerHeight < 992){
+        var width = $(".div-content-3").width()
         $(".heading").width(width);
     }
     else{
-        var width = $(".content").width() - 330 - 70;
+        var width = $(".div-content-3").width();
         $(".heading").width(width);
     }
-}
+    var imgwidth = ($("body").width() - $(".content").width())/2 + 69;
+    $(".img-border").css("left", imgwidth);
+    
+};
+
+var imgwidth = ($("body").width() - $(".content").width())/2 + 69;
+    $(".img-border").css("left", imgwidth);
 
 sizeContentDivs();
 
@@ -80,3 +93,17 @@ window.onresize = () =>{
     // $(".heading").width(width);
     sizeContentDivs();
 }
+
+// anime({
+//     targets: '.about-content',
+//     top: 0,
+//     bottom: 0,
+//     left: -20,
+//     right: 0,
+//     duration: 3000
+// });
+
+
+// var scrollSkills = anime({
+//     targets: ''
+// })

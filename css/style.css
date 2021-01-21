@@ -23,18 +23,19 @@ body{
     max-height: 100%;
     overflow: hidden;
     padding: 0;
+    z-index: 1;
 }
 
 .div-content-1{
     width: 70px;
     height: 100%;
     float:left;
-    color: #fff;
-    background-color: #1D3557;
+    background-color: #fff;
+    border-right: solid 1px #efefef ;
 }
 
 .div-content-2{
-    width: 215px;
+    width: 230px;
     height: 100%;
     float: left;
     /* border-right: #cfcfcf 2px solid; */
@@ -42,29 +43,27 @@ body{
 }
 
 .div-content-3{
-    width: calc(100% - 215px - 70px);
+    width: calc(100% - 230px - 70px);
     height: 100%;
     float:left;
 }
 
 .img-border{
-    width: 200px;
-    height: 200px;
+    width: 230;
+    height: 85%;
+    top: 7%;
     background-color: #9edaff;
-    margin: 0 auto;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     position: absolute;
-    top: 35%;
-    left: 65px;
+    /* top: 35%; */
     overflow: hidden;
+    padding: 0;
+    z-index: 2;
 }
 
 .img-me{
-    /* width: 120%;
-    height: 130%; */
-    width: 240px;
-    height: 260px;
-    margin-left: -12px;
+    height: 100%;
+    width: 230px;
 }
 
 /* left-menu */
@@ -77,7 +76,7 @@ body{
 }
 
 .toggle-leftmenu:hover{
-    color: #111;
+    color: grey;
 }
 
 .side-menu-list{
@@ -86,18 +85,18 @@ body{
     justify-content: center;
     align-content: center;
     margin-top: 100px;
-    background-color: #1D3557;
+    background-color: #fff;
     font-size: 25px;
 }
 
 .side-menu-list > a >div{
     text-align: center;
     padding: 15px 0;
-    color: #fff;
+    color: #96c4e4;
 }
 
 .side-menu-list > a >div:hover{
-    background-color:  #96c4e4;
+    color:  #96c4e4!important;
 }
 
 @media only screen and (max-height: 600px){
@@ -140,6 +139,9 @@ body{
         float: left;
     }
 
+    .img-border, .img-me{
+        display: none!important;
+    }
     .main-contents{
         left: 80px!important;
         padding-right: 10px;
@@ -157,7 +159,7 @@ body{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #111;
@@ -215,29 +217,23 @@ body{
   }
 
   @media screen and (min-width: 992px){
-    .img-border{
-        width: 300px;
-        height: 300px;
-        top: 20%;
-    }
-
-    .img-me {
-        width: 340px;
-        height: 360px;
-        margin-left: -12px;
-    }
-
+    
     .div-content-2{
-        width: 315px;
+        width: 380px;
     }
 
     .div-content-3{
-        width: calc(100% - 315px - 70px);
+        width: calc(100% - 385px - 70px);
     }
 
     .main-contents{
-        left: 390px!important;
+        left: 450px!important;
     }
+
+    .img-border, .img-me{
+        width: 380px;
+    }
+
   }
 
 .main-contents{
@@ -258,14 +254,30 @@ h1{
 }
 
 .sub-content{
-    margin: 0;
-    padding: 20px;
+    /* margin: 0; */
+    /* padding: 20px; */
 }
 
 .content-body{
     color: grey;
+    text-align: center;
 }
 
 .heading{
 
+}
+
+#aboutme{
+    height: 100%;
+}
+
+
+.about-content{
+    height: 30%;
+    position: absolute;
+    margin: auto;
+    /* top: 0;
+    bottom: 0;
+    left: -20px;
+    right: 0; */
 }

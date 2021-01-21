@@ -1,0 +1,103 @@
+:root{
+    --primary-font-color: #36e23b;
+    --primary2-font-color: #afafaf;
+    --primary2: #96c4e4;
+    --primary-bgcolor: #fff;
+}
+
+
+body{
+    color: var(--primary2-font-color);
+    background-color: var(--primary-bgcolor);
+}
+
+
+/* Menu CSS Starts */
+
+.menu-toggle-button{
+    background-color: var(--primary-font-color);
+    padding: 5px 11px;
+    font-size: 30px;
+    position: fixed;
+    top: 1.95rem;
+    right: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.main-menu{
+    height: 100vh;
+    width: 0%;
+    display: none;
+    background-color: #000;
+    color: var(--primary-font-color);
+    z-index: 100;
+    position: fixed;
+}
+
+.closebtn {
+    text-decoration: none;
+    /* display: block; */
+    transition: 0.3s;
+    position: fixed;
+    top: 1.0rem;
+    right: 4.5rem;
+    font-size: 40px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.closebtn:hover{
+    transition: 0.3s;
+    transform: rotateX(180deg);
+}
+
+.menu-content{
+    padding-top: 4.5rem;
+}
+
+.menu-link{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 3.5rem;
+    color: var(--primary-font-color);
+    overflow: hidden;
+    background-color: #000;
+}
+
+a, a:visited{
+    color: var(--primary-font-color);
+}
+
+
+.intro-img{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/AishwantGhimire.JPG");
+    background-repeat: none;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fff;
+}
+
+
+.intro{
+    width: 30%;
+    margin: 10% 0 0 10%;
+    border: solid #fff .25rem;
+    padding: 0.5rem;
+    /* opacity: 0.9; */
+}
+
+.name{
+    border-bottom: var(--primary-font-color) solid .2rem;
+    font-weight: 600;
+    font-size: 3.05rem;
+}
+
+.headings{
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--primary-font-color);
+}
