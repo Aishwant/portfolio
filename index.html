@@ -5,198 +5,70 @@
   <title>Aishwant Ghimire - Porfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/fea13828ae.js" crossorigin="anonymous"></script>
-  <!-- <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  /> -->
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="sidenav" id="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="sidenav-menu">
-            <a href="#aboutme" onclick="aboutme()">About <i class="fas fa-user"></i></a>
-            <a href="#skills" onclick="skills()">Skills <i class="fas fa-pencil-ruler"></i></a>
-            <a href="#experiences" onclick="experiences()">Experiences <i class="fas fa-briefcase"></i></a>
-            <a href="#education" onclick="education()">Education <i class="fas fa-graduation-cap"></i></a>
-            <a href="#contact" onclick="contact()">Contact <i class="fas fa-phone"></i></a>
+    <div class="menu-toggle-button text-center" onclick="openNav()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div id="main-menu" class="main-menu text-center">
+        <div class="closebtn" onclick="closeNav()">
+            <i class="far fa-times-circle"></i>
+        </div>
+        <ul class="menu-content text-center">
+            <li class="menu-link"><a href="">About Me</a></li>
+            <li class="menu-link"><a href="">Work</a></li>
+            <li class="menu-link"><a href="">Experience</a></li>
+            <li class="menu-link"><a href="">Education</a></li>
+            <li class="menu-link"><a href="">Contact Me</a></li>
+            <li class="menu-link"><a href="">Resume</a></li>
+        </div>       
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <section class="intro-img">
+                <div class="custom-control custom-switch text-right pr-3">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" onchange="changeTheme()">
+                    <label class="custom-control-label" for="customSwitch1"><i class="far fa-moon"></i></label>
+                </div>
+                <div class="intro">
+                    <h4>Hello, I am</h4>
+                    <h2 class="name">Aishwant Ghimire.</h2>
+                    <h3>I want to build things that will make a difference</h3>
+                </div>
+            </section>
         </div>
     </div>
-    <div class="img-border">
-        <img src="assets/main.jpg" class="img-me responsive" alt="Picture of Aishwant"/>
-    </div>
-    <div class="content container">
-        <div class="div-content-1">
-            <!-- Side Menu Starts Here -->
-            <div class="toggle-leftmenu text-center" onclick="openNav()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="side-menu-list">
-                <a href="#aboutme">
-                    <div class="aboutme-nav" aria-label="about me">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </a>
-                <a href="#skills">
-                    <div class="skills-nav" aria-label="skills">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                </a>
-                <a href="#experiences">
-                    <div class="experiences-nav" aria-label="experiences">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                </a>
-                <a href="#education">
-                    <div class="education-nav" aria-label="education">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                </a>
-                <a href="#contact">
-                    <div class="contact-nav" aria-label="contact">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                </a>
-            </div>
+    <section id="about-me mt-3">
+        <div class="container">
+            <h1 class="headings">about me</h2>
         </div>
-        <div class="div-content-2">
-            <!-- <div class="img-border">
-                <img src="assets/main.jpg" class="img-me responsive" alt="Picture of Aishwant"/>
-            </div> -->
+    </section>
+    <section id="work mt-3">
+        <div class="container">
+            <h1 class="headings">work</h2>
         </div>
-        <div class="div-content-3">
-            <div class="main-contents" id="content-wrapper">
-                <div class="heading text-center" id="aboutme">
-                    <div class="sub-content about-content">
-                        <!-- <div class="row"> -->
-                            <h1>Aishwant Ghimire</h1>
-                            <div class="content-body">
-                                <p style="color:#82a4d4">Software / BI Developer <tag style="color: grey;">|</tag> Memphis, TN </p>
-                                <!-- <p>I am a Software and BI Developer with passion to build robust systems and all always ready to collaborate and cooperate with teams. I have two years’ experience in creating and designing web and desktop applications.
-                                I love to code but apart from programming, I like to play and watch soccer, sing, read watch Movies and travel.
-                                </p> -->
-                            </div>
-                        <!-- </div> -->
-                        <!-- <hr style="margin: 40px 0 0px 0;"> -->
-                    </div>
-                </div>
-
-                <div class="heading" id="skills" data-aos="fade-left">
-                    <div class="sub-content container">
-                        <h1 class="header">skills</h1>
-                        <p>My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <hr style="margin: 40px 0 0px 0;">
-                    </div>
-                </div>
-
-                <div class="heading" id="experiences">
-                    <div class="sub-content container">
-                        <h1 class="header">experiences</h1>
-                        <p>My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <hr style="margin: 40px 0 0px 0;">
-                        </div>
-                </div>
-
-                <div class="heading" id="education">
-                    <div class="sub-content container">
-                        <h1 class="header">education</h1>
-                        <p>My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <hr style="margin: 40px 0 0px 0;">
-                    </div>
-                </div>
-                <div class="heading" id="contact">
-                    <div class="sub-content container">
-                        <h1 class="header">contact</h1>
-                        <p>My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing?My name is Aishwant Ghimire. How are you doing?</p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                        <p>My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire.
-                            How are you doing? My name is Aishwant Ghimire. How are you doing? My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                            My name is Aishwant Ghimire. How are you doing?
-                        </p>
-                    </div>
-                </div>
-            </div>
+    </section>
+    <section id="experience mt-3">
+        <div class="container">
+            <h1 class="headings">experience</h2>
         </div>
-    </div>
-  
-
-  <!-- JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    $(function() {
-         AOS.init();
-    });
-</script>
-  <script src="js/main.js"></script>
+    </section>
+    <section id="education mt-3">
+        <div class="container">
+            <h1 class="headings">education</h2>
+        </div>
+    </section>
+    <section id="contact-me mt-3">
+        <div class="container">
+            <h1 class="headings">contact me</h2>
+        </div>
+    </section>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="js/mainjs.js"></script>
 </body>
 </html>
