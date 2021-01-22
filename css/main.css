@@ -153,6 +153,11 @@ a, a:visited{
     color: rgb(247, 80, 80);
 }
 
+.contact-sub{
+    width: 25%;
+    margin: auto;
+}
+
 .btn:hover{
     background-color: rgb(247, 80, 80);
     color: #fff;
@@ -190,5 +195,10 @@ a, a:visited{
         margin-top: 0.9em;
         /* margin-right: 0.75rem; */
     }
+    .contact-sub{
+        width: 90%;
+        margin: auto;
+    }
+    
 }
 
