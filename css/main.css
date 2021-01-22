@@ -148,6 +148,16 @@ a, a:visited{
     color: rgb(247, 80, 80);
 }
 
+.btn{
+    border-color: rgb(247, 80, 80);
+    color: rgb(247, 80, 80);
+}
+
+.btn:hover{
+    background-color: rgb(247, 80, 80);
+    color: #fff;
+}
+
 @media screen and (max-width: 992px){
     .intro{
         max-width: 50%;
@@ -181,3 +191,4 @@ a, a:visited{
         /* margin-right: 0.75rem; */
     }
 }
+
