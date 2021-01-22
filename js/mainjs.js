@@ -26,10 +26,13 @@ changeTheme = () => {
 lightTheme = () => {
     document.querySelector(".intro-img").style.backgroundImage = "url('./assets/AishwantGhimire.JPG')"
     document.documentElement.style.setProperty("--primary-bgcolor", "#fff");
+    document.documentElement.style.setProperty("--primary2-font-color", "#afafaf");
+    document.documentElement.style.setProperty("--primary3-font-color", "#afafaf");
 }
 
 darkTheme = () => {
     document.querySelector(".intro-img").style.backgroundImage = "url('./assets/AishwantGhimirebw.JPG')"
     document.documentElement.style.setProperty("--primary-bgcolor", "#000");
     document.documentElement.style.setProperty("--primary2-font-color", "#fff");
+    document.documentElement.style.setProperty("--primary3-font-color", "#333");
 }

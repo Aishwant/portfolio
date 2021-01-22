@@ -1,6 +1,7 @@
 :root{
-    --primary-font-color: #36e23b;
+    --primary-font-color: #4df253;
     --primary2-font-color: #afafaf;
+    --primary3-font-color: #afafaf;
     --primary2: #96c4e4;
     --primary-bgcolor: #fff;
 }
@@ -9,6 +10,15 @@
 body{
     color: var(--primary2-font-color);
     background-color: var(--primary-bgcolor);
+    /* font-family: 'Source Sans Pro', sans-serif; */
+}
+
+
+.custom-control{
+    position: fixed;
+    top: 0.1rem;
+    right: 1.25rem;
+    z-index: 10;
 }
 
 
@@ -42,7 +52,7 @@ body{
     transition: 0.3s;
     position: fixed;
     top: 1.0rem;
-    right: 4.5rem;
+    right: 2.5rem;
     font-size: 40px;
     cursor: pointer;
     overflow: hidden;
@@ -71,19 +81,23 @@ a, a:visited{
 }
 
 
+.custom-control-input:checked~.custom-control-label::before {
+    color: var(--primary-bgcolor);
+    border-color: var(--primary-font-color);
+    background-color:var(--primary-font-color);
+}
+
 .intro-img{
     width: 100%;
     height: 100vh;
     background-image: url("./../assets/AishwantGhimire.JPG");
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: multiply;
     color: #fff;
 }
 
-
 .intro{
-    width: 30%;
+    max-width: 30%;
     margin: 10% 0 0 10%;
     border: solid #fff .25rem;
     padding: 0.5rem;
@@ -92,12 +106,78 @@ a, a:visited{
 
 .name{
     border-bottom: var(--primary-font-color) solid .2rem;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 3.05rem;
 }
 
 .headings{
-    font-weight: 600;
-    font-size: 2.5rem;
+    font-weight: 800;
+    font-size: 3.0rem;
     color: var(--primary-font-color);
+}
+
+.highlight{
+    border-left: #efefef solid 0.3em;
+    font-size: 1.5em;
+    color: #50b9ff;
+    width: 80%;
+    margin: auto;
+}
+
+.about-div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-div > div {
+    border: none;
+    border-radius: 1.25rem;
+    background-color: #efefef;
+    padding: 0.15rem;
+    width: 25%;
+    color: var(--primary3-font-color);
+    font-weight: 800;
+    /* margin-right: 0.75rem; */
+}
+
+.card-text > a, .card-text >  a:visited{
+    color: var(--primary3-font-color);
+}
+
+.card-title > i{
+    color: rgb(247, 80, 80);
+}
+
+@media screen and (max-width: 992px){
+    .intro{
+        max-width: 50%;
+    }
+    .intro-img{
+        background-size:cover;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    
+    .intro{
+        max-width: 70%;
+    }
+
+    .intro-img{
+        width: 100vh;
+        height: 50vh;
+        background-size:cover;
+    }
+
+    .about-div{
+        display: block;
+        justify-content:center;
+    }
+
+    .about-div > div {
+        width: 100%;
+        margin-top: 0.9em;
+        /* margin-right: 0.75rem; */
+    }
 }
