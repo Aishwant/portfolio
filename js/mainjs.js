@@ -32,7 +32,7 @@ lightTheme = () => {
 
 darkTheme = () => {
     document.querySelector(".intro-img").style.backgroundImage = "url('./assets/AishwantGhimirebw.JPG')"
-    document.documentElement.style.setProperty("--primary-bgcolor", "#000");
+    document.documentElement.style.setProperty("--primary-bgcolor", "#222");
     document.documentElement.style.setProperty("--primary2-font-color", "#fff");
     document.documentElement.style.setProperty("--primary3-font-color", "#333");
 }
